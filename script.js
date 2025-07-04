@@ -6,12 +6,12 @@ const heroImages = [
     desc: "Alta intensidade pra desafiar seus limites."
   },
   {
-    src: "https://hyrox.com/wp-content/uploads/2023/03/HYROX-Event.jpg",
+    src: "https://plus.unsplash.com/premium_photo-1664109999476-58db99e8b785?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     title: "Hyrox",
     desc: "Corrida e força num desafio híbrido global."
   },
   {
-    src: "https://images.unsplash.com/photo-1536922246289-88c42f957773?q=80&w=1204&auto=format&fit=crop",
+    src: "https://media.istockphoto.com/id/837512844/pt/foto/determined-boy-practicing-rock-climbing.jpg?s=2048x2048&w=is&k=20&c=kOq6ClSjh-9r_OhfrcZDuCAUPJ2hi_80H8xIDLrADm8=",
     title: "Escalada",
     desc: "Técnica, resistência e adrenalina vertical."
   }
