@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modalidades | CT Conectados</title>
+  <link rel="stylesheet" href="modalidades-v7.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="hero fade-up">
+    <div class="hero-message">
+      <h1>Descubra sua próxima modalidade</h1>
+      <p>Treinos para todos os estilos. Qual combina com você?</p>
+      <button id="btn-compara-extra" class="hero-btn">✨ Ver Qual Combina</button>
+    </div>
+    <div class="hero-slide" id="hero-slide">
+      <img id="hero-img" src="" alt="Modalidade destaque" />
+      <div class="hero-overlay">
+        <h2 id="hero-title">Modalidade</h2>
+        <p id="hero-desc">Descrição da modalidade</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="catalogo fade-up">
+    <h2>🔥 Treinos Funcionais</h2>
+    <div class="cards">
+      <div class="card fade-up"
+        data-title="Cross"
+        data-desc="Alta intensidade e energia pra desafiar seus limites."
+        data-video="https://www.youtube.com/embed/UclNL0IQg_U"
+        data-gallery="cross1.jpg,cross2.jpg">
+        <img src="https://images.unsplash.com/photo-1517964603305-11c0f6f66012?q=80&w=1171&auto=format&fit=crop" alt="Cross" />
+        <h3>Cross</h3>
+        <button class="btn-modal">Saiba mais</button>
+      </div>
+      <div class="card fade-up"
+        data-title="Hyrox"
+        data-desc="Corrida + força. O treino híbrido que conquistou o mundo."
+        data-video="https://www.youtube.com/embed/Yxd20NUoIe0"
+        data-gallery="hyrox1.jpg,hyrox2.jpg">
+        <img src="https://hyrox.com/wp-content/uploads/2023/03/HYROX-Event.jpg" alt="Hyrox" />
+        <h3>Hyrox</h3>
+        <button class="btn-modal">Saiba mais</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalogo fade-up">
+    <h2>🧗 Força & Desempenho</h2>
+    <div class="cards">
+      <div class="card fade-up"
+        data-title="Escalada"
+        data-desc="Técnica, resistência e adrenalina nas alturas."
+        data-video="https://www.youtube.com/embed/TyPLOoq0Oaw"
+        data-gallery="esc1.jpg,esc2.jpg">
+        <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?q=80&w=1204&auto=format&fit=crop" alt="Escalada" />
+        <h3>Escalada</h3>
+        <button class="btn-modal">Saiba mais</button>
+      </div>
+      <div class="card fade-up"
+        data-title="Musculação"
+        data-desc="Força, foco e evolução com equipamentos modernos."
+        data-video="https://www.youtube.com/embed/7xS58OgphFc"
+        data-gallery="musculacao1.jpg,musculacao2.jpg">
+        <img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?q=80&w=1170&auto=format&fit=crop" alt="Musculação" />
+        <h3>Musculação</h3>
+        <button class="btn-modal">Saiba mais</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalogo fade-up">
+    <h2>🚴 Energia & Ritmo</h2>
+    <div class="cards">
+      <div class="card fade-up"
+        data-title="Spinning"
+        data-desc="Pedale no ritmo certo e turbine sua resistência."
+        data-video="https://www.youtube.com/embed/yMfmaQAXQns"
+        data-gallery="spin1.jpg,spin2.jpg">
+        <img src="https://plus.unsplash.com/premium_photo-1664910917373-b044e0a0ff31?q=80&w=2071&auto=format&fit=crop" alt="Spinning" />
+        <h3>Spinning</h3>
+        <button class="btn-modal">Saiba mais</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalogo fade-up">
+    <h2>🎯 Kids & Melhor Idade</h2>
+    <div class="cards">
+      <div class="card fade-up"
+        data-title="Kids"
+        data-desc="Atividades seguras e criativas para os pequenos."
+        data-video="https://www.youtube.com/embed/jUZ3TGVUv4w"
+        data-gallery="kids1.jpg,kids2.jpg">
+        <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?q=80&w=1204&auto=format&fit=crop" alt="Kids" />
+        <h3>Kids</h3>
+        <button class="btn-modal">Saiba mais</button>
+      </div>
+      <div class="card fade-up"
+        data-title="60+"
+        data-desc="Saúde, movimento e bem-estar para a melhor idade."
+        data-video="https://www.youtube.com/embed/KLiFQMqpQaA"
+        data-gallery="idoso1.jpg,idoso2.jpg">
+        <img src="https://images.unsplash.com/photo-1517964603305-11c0f6f66012?q=80&w=1171&auto=format&fit=crop" alt="60+" />
+        <h3>60+</h3>
+        <button class="btn-modal">Saiba mais</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL EXTRA COM COMPARATIVO + INCLUSIVO -->
+  <div class="modal" id="modal-extra">
+    <div class="modal-content long">
+      <span class="close">&times;</span>
+
+      <h2>Compare as Modalidades</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Modalidade</th><th>Intensidade</th><th>Público Ideal</th><th>Adaptações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Cross</td><td>Alta</td><td>Adultos ativos</td><td>Turmas kids e melhor idade</td></tr>
+          <tr><td>Hyrox</td><td>Alta</td><td>Desafio e performance</td><td>Treinos em dupla</td></tr>
+          <tr><td>Escalada</td><td>Média</td><td>Aventureiros</td><td>Progressão guiada</td></tr>
+          <tr><td>Musculação</td><td>Variável</td><td>Todos os públicos</td><td>Equipamentos adaptáveis</td></tr>
+          <tr><td>Spinning</td><td>Média</td><td>Resistência</td><td>Playlist ajustável</td></tr>
+          <tr><td>Kids</td><td>Leve</td><td>Crianças</td><td>Atividades lúdicas</td></tr>
+          <tr><td>60+</td><td>Leve</td><td>Melhor idade</td><td>Mobilidade e equilíbrio</td></tr>
+        </tbody>
+      </table>
+
+      <hr />
+
+      <h2>Treinar é para todos</h2>
+      <p>No CT Conectados, acreditamos que o movimento transforma vidas — em qualquer idade.</p>
+      <div class="vitrine">
+        <div class="vitrine-item"><img src="melhor-idade.jpg" alt="Melhor idade" /><p>“Comecei aos 62 e hoje treino com minha neta!”</p></div>
+        <div class="vitrine-item"><img src="kids-cross.jpg" alt="Kids no Cross" /><p>“O CT me mostrou que é possível começar brincando.”</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="https://wa.me/5534993052222" class="floating-btn" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="WhatsApp" style="width: 28px; height: 28px;" />
+  </a>
+
+  <script src="script-v7.js"></script>
+</body>
+</html>

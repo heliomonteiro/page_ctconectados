@@ -1,0 +1,503 @@
+html
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modalidades | CT Conectados</title>
+  <link rel="stylesheet" href="modalidades-v6.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-message">
+      <h1>Descubra sua próxima modalidade</h1>
+      <p>Treinos para todos os estilos. Qual combina com você?</p>
+      <a href="index.html" class="hero-btn">← Voltar ao Início</a>
+    </div>
+    <div class="hero-slide" id="hero-slide">
+      <img id="hero-img" src="" alt="Modalidade destaque" />
+      <div class="hero-overlay">
+        <h2 id="hero-title">Modalidade</h2>
+        <p id="hero-desc">Descrição da modalidade</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- CATEGORIAS -->
+  <section class="catalogo">
+    <h2>🔥 Treinos Funcionais</h2>
+    <div class="carrossel-wrap">
+      <button class="carrossel-btn left" data-target="funcionais">←</button>
+      <div class="cards" id="funcionais">
+        <div class="card" data-title="Cross" data-desc="Alta intensidade e energia pra desafiar seus limites." data-video="https://www.youtube.com/embed/UclNL0IQg_U">
+          <img src="https://images.unsplash.com/photo-1517964603305-11c0f6f66012?q=80&w=1171&auto=format&fit=crop" alt="Cross" />
+          <h3>Cross</h3>
+          <button class="btn-modal">Saiba mais</button>
+        </div>
+        <div class="card" data-title="Hyrox" data-desc="Corrida + força. O treino híbrido que conquistou o mundo." data-video="https://www.youtube.com/embed/Yxd20NUoIe0">
+          <img src="https://hyrox.com/wp-content/uploads/2023/03/HYROX-Event.jpg" alt="Hyrox" />
+          <h3>Hyrox</h3>
+          <button class="btn-modal">Saiba mais</button>
+        </div>
+      </div>
+      <button class="carrossel-btn right" data-target="funcionais">→</button>
+    </div>
+  </section>
+
+  <section class="catalogo">
+    <h2>🧗 Força & Desempenho</h2>
+    <div class="carrossel-wrap">
+      <button class="carrossel-btn left" data-target="desempenho">←</button>
+      <div class="cards" id="desempenho">
+        <div class="card" data-title="Escalada" data-desc="Técnica, resistência e adrenalina nas alturas." data-video="https://www.youtube.com/embed/TyPLOoq0Oaw">
+          <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?q=80&w=1204&auto=format&fit=crop" alt="Escalada" />
+          <h3>Escalada</h3>
+          <button class="btn-modal">Saiba mais</button>
+        </div>
+        <div class="card" data-title="Musculação" data-desc="Força, foco e evolução com equipamentos modernos." data-video="https://www.youtube.com/embed/7xS58OgphFc">
+          <img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?q=80&w=1170&auto=format&fit=crop" alt="Musculação" />
+          <h3>Musculação</h3>
+          <button class="btn-modal">Saiba mais</button>
+        </div>
+      </div>
+      <button class="carrossel-btn right" data-target="desempenho">→</button>
+    </div>
+  </section>
+
+  <section class="catalogo">
+    <h2>🚴 Energia & Ritmo</h2>
+    <div class="carrossel-wrap">
+      <button class="carrossel-btn left" data-target="ritmo">←</button>
+      <div class="cards" id="ritmo">
+        <div class="card" data-title="Spinning" data-desc="Pedale no ritmo certo e turbine sua resistência." data-video="https://www.youtube.com/embed/yMfmaQAXQns">
+          <img src="https://plus.unsplash.com/premium_photo-1664910917373-b044e0a0ff31?q=80&w=2071&auto=format&fit=crop" alt="Spinning" />
+          <h3>Spinning</h3>
+          <button class="btn-modal">Saiba mais</button>
+        </div>
+      </div>
+      <button class="carrossel-btn right" data-target="ritmo">→</button>
+    </div>
+  </section>
+
+  <section class="catalogo">
+    <h2>🎯 Kids & Melhor Idade</h2>
+    <div class="carrossel-wrap">
+      <button class="carrossel-btn left" data-target="kids">←</button>
+      <div class="cards" id="kids">
+        <div class="card" data-title="Kids" data-desc="Atividades seguras e criativas para os pequenos." data-video="https://www.youtube.com/embed/jUZ3TGVUv4w">
+          <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?q=80&w=1204&auto=format&fit=crop" alt="Kids" />
+          <h3>Kids</h3>
+          <button class="btn-modal">Saiba mais</button>
+        </div>
+        <div class="card" data-title="60+" data-desc="Saúde, movimento e bem-estar para a melhor idade." data-video="https://www.youtube.com/embed/KLiFQMqpQaA">
+          <img src="https://images.unsplash.com/photo-1517964603305-11c0f6f66012?q=80&w=1171&auto=format&fit=crop" alt="60+" />
+          <h3>60+</h3>
+          <button class="btn-modal">Saiba mais</button>
+        </div>
+      </div>
+      <button class="carrossel-btn right" data-target="kids">→</button>
+    </div>
+  </section>
+
+  <!-- COMPARATIVO -->
+  <section class="comparativo">
+    <h2>Compare as Modalidades</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Modalidade</th>
+          <th>Intensidade</th>
+          <th>Público Ideal</th>
+          <th>Adaptações Disponíveis</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Cross</td><td>Alta</td><td>Adultos ativos</td><td>Turmas para melhor idade e kids com ajustes individuais</td></tr>
+        <tr><td>Hyrox</td><td>Alta</td><td>Desafio e performance</td><td>Ritmo moderado, treinos em dupla, supervisão para iniciantes</td></tr>
+        <tr><td>Escalada</td><td>Média</td><td>Técnicos e aventureiros</td><td>Parede baixa, progressão controlada, ideal para idosos</td></tr>
+        <tr><td>Musculação</td><td>Variável</td><td>Todos os públicos</td><td>Cargas adaptáveis, treino funcional para 60+, kids com orientação</td></tr>
+        <tr><td>Spinning</td><td>Média</td><td>Energia e resistência</td><td>Ritmo controlado, playlists motivadoras, turmas para 60+</td></tr>
+        <tr><td>Kids</td><td>Leve</td><td>Crianças 5–12 anos</td><td>Atividades lúdicas, educativas e supervisionadas</td></tr>
+        </td><td>Melhor idade</td><td>Mobilidade, equilíbrio, leveza e socialização</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+	<section class="inclusivo">
+	  <h2>Treinar é para todos</h2>
+	  <p>No CT Conectados, acreditamos que o movimento transforma vidas — em qualquer idade.</p>
+	  <div class="vitrine">
+		<div class="vitrine-item">
+		  <img src="melhor-idade.jpg" alt="Melhor idade treinando" />
+		  <p>“Comecei aos 62 e hoje treino com minha neta!”</p>
+		</div>
+		<div class="vitrine-item">
+		  <img src="kids-cross.jpg" alt="Kids no Cross" />
+		  <p>“O CT me mostrou que é possível começar brincando.”</p>
+		</div>
+		<div class="vitrine-item">
+		  <img src="turma-integrada.jpg" alt="Turma mista" />
+		  <p>Treinos integrados com adaptações individuais — todos juntos, cada um no seu ritmo.</p>
+		</div>
+	  </div>
+	</section>
+
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe id="modal-video" src="" allowfullscreen></iframe>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <!-- WHATSAPP -->
+  <a href="https://wa.me/5534993052222" class="floating-btn" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn.simpleicons.org/whatsapp/FFFFFF" alt="WhatsApp" style="width: 28px; height: 28px;" />
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+css
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0b0b0b;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 65vh;
+  overflow: hidden;
+}
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+.hero-message {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  z-index: 2;
+}
+.hero-message h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.hero-message p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 16px;
+}
+.hero-btn {
+  background: #0B797D;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.hero-btn:hover {
+  background: #0e9a9f;
+}
+
+/* HERO Overlay */
+.hero-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 40px;
+  z-index: 2;
+}
+.hero-overlay h2 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+.hero-overlay p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* CATALOG */
+.catalogo {
+  margin: 40px 20px;
+}
+.catalogo h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+/* CARDS + CARROSSEL */
+.carrossel-wrap {
+  position: relative;
+}
+.cards {
+  display: flex;
+  gap: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+.card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 280px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card h3 {
+  padding: 10px 16px 0;
+  color: #0B797D;
+}
+.btn-modal {
+  margin: 10px 16px 16px;
+  background: #0B797D;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-modal:hover {
+  background: #0e9a9f;
+  box-shadow: 0 0 10px rgba(11, 121, 125, 0.6);
+  transform: scale(1.05);
+}
+
+/* Botões de rolagem */
+.carrossel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+.carrossel-btn.left {
+  left: -10px;
+}
+.carrossel-btn.right {
+  right: -10px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+.modal-content iframe {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 16px;
+  border: none;
+}
+.modal-content h3 {
+  color: #0B797D;
+  margin-bottom: 10px;
+}
+.modal-content p {
+  color: #ccc;
+}
+.close {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* WhatsApp */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.floating-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+
+/* COMPARATIVO */
+.comparativo {
+  margin: 40px 20px;
+}
+.comparativo h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+.comparativo table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.comparativo th, .comparativo td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+.comparativo th {
+  background: #0B797D;
+}
+
+/* INCLUSIVO */
+.inclusivo {
+  margin: 40px 20px;
+}
+.inclusivo h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+.inclusivo p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+.vitrine {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.vitrine-item {
+  flex: 1 1 280px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+.vitrine-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.vitrine-item p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
+e js
+
+// HERO ROTATIVO
+const heroImages = [
+  {
+    src: "https://images.unsplash.com/photo-1517964603305-11c0f6f66012?q=80&w=1171&auto=format&fit=crop",
+    title: "Cross",
+    desc: "Alta intensidade pra desafiar seus limites."
+  },
+  {
+    src: "https://hyrox.com/wp-content/uploads/2023/03/HYROX-Event.jpg",
+    title: "Hyrox",
+    desc: "Corrida e força num desafio híbrido global."
+  },
+  {
+    src: "https://images.unsplash.com/photo-1536922246289-88c42f957773?q=80&w=1204&auto=format&fit=crop",
+    title: "Escalada",
+    desc: "Técnica, resistência e adrenalina vertical."
+  }
+];
+
+let current = 0;
+function updateHero() {
+  const item = heroImages[current];
+  document.getElementById("hero-img").src = item.src;
+  document.getElementById("hero-title").textContent = item.title;
+  document.getElementById("hero-desc").textContent = item.desc;
+  current = (current + 1) % heroImages.length;
+}
+updateHero();
+setInterval(updateHero, 5000);
+
+// MODAL
+const modal = document.getElementById("modal");
+const modalVideo = document.getElementById("modal-video");
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-desc");
+document.querySelectorAll(".btn-modal").forEach(btn => {
+  btn.onclick = e => {
+    const card = e.target.closest(".card");
+    modalTitle.textContent = card.dataset.title;
+    modalDesc.textContent = card.dataset.desc;
+    modalVideo.src = card.dataset.video;
+    modal.style.display = "flex";
+  };
+});
+document.querySelector(".close").onclick = () => {
+  modal.style.display = "none";
+  modalVideo.src = "";
+};
+window.onclick = e => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    modalVideo.src = "";
+  }
+};
+
+// CARROSSEL COM SETAS
+document.querySelectorAll(".carrossel-btn").forEach(btn => {
+  btn.onclick = () => {
+    const targetId = btn.dataset.target;
+    const container = document.getElementById(targetId);
+    const scrollAmount = 300;
+    container.scrollBy({
+      left: btn.classList.contains("right") ? scrollAmount : -scrollAmount,
+      behavior: "smooth"
+    });
+  };
+});

@@ -1,0 +1,434 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: #0b0b0b;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CORES DA IDENTIDADE */
+.btn-primary {
+  background-color: #8ECE42;
+  color: #0b0b0b;
+}
+.btn-primary:hover {
+  background-color: #76b932;
+}
+
+.btn-secondary {
+  background-color: #18A1AA;
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #139099;
+  box-shadow: 0 0 10px rgba(24, 161, 170, 0.6);
+  transform: scale(1.05);
+}
+
+.btn-tertiary {
+  background-color: #F8A10E;
+  color: #0b0b0b;
+}
+.btn-tertiary:hover {
+  background-color: #db8b00;
+}
+
+/* ANIMAÇÃO */
+.card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 65vh;
+  overflow: hidden;
+}
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+.hero-message {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  z-index: 2;
+}
+.hero-message h1 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.hero-message p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 16px;
+}
+.hero-btn {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+.btn-fullscreen {
+  background: none;
+  border: none;
+  color: #F8A10E;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* HERO Overlay */
+.hero-overlay {
+  position: absolute;
+  bottom: 20%;
+  left: 40px;
+  z-index: 2;
+}
+.hero-overlay h2 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+.hero-overlay p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* CATALOG */
+.catalogo {
+  margin: 40px 20px;
+}
+.catalogo h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+/* CARDS + CARROSSEL */
+.carrossel-wrap {
+  position: relative;
+}
+.cards {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+.cards::-webkit-scrollbar {
+  height: 6px;
+}
+.cards::-webkit-scrollbar-thumb {
+  background: #18A1AA;
+  border-radius: 3px;
+}
+.card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  flex: 0 0 280px;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.card h3 {
+  padding: 10px 16px 0;
+  color: #8ECE42;
+}
+.btn-modal {
+  margin: 10px 16px 16px;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  width: calc(100% - 32px);
+  transition: all 0.3s ease;
+}
+
+/* Botões de rolagem */
+.carrossel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+.carrossel-btn.left {
+  left: -10px;
+}
+.carrossel-btn.right {
+  right: -10px;
+}
+
+/* Modal Galeria */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 95%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+}
+.modal-content h3 {
+  color: #8ECE42;
+  margin-top: 16px;
+}
+.modal-content p {
+  color: #ccc;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+#modal-media iframe, #modal-media img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border: none;
+  border-radius: 8px;
+}
+#modal-media iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: none;
+}
+#modal-thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#modal-thumbs img, .video-thumb {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.video-thumb .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  pointer-events: none;
+}
+#modal-thumbs .active {
+  border-color: #F8A10E;
+}
+
+/* Modal Fullscreen */
+.modal.fullscreen {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0b0b0b;
+  z-index: 9999;
+  overflow-y: auto;
+}
+.modal-fullscreen-content {
+  padding: 40px 20px;
+}
+.close-fullscreen {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+/* Comparativo */
+.comparativo {
+  margin: 40px 0;
+}
+.comparativo table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 0.9rem;
+}
+.comparativo th, .comparativo td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: left;
+}
+.comparativo th {
+  background: #18A1AA;
+}
+
+/* Inclusivo */
+.inclusivo {
+  margin: 40px 0;
+}
+.inclusivo h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #F8A10E;
+}
+.inclusivo p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+.vitrine {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.vitrine-item {
+  flex: 1 1 280px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+}
+.vitrine-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.vitrine-item p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* WhatsApp */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  border-radius: 50%;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+.floating-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero-message {
+    left: 20px;
+    top: 20px;
+  }
+  .hero-message h1 {
+    font-size: 1.6rem;
+  }
+  .hero-overlay {
+    left: 20px;
+    bottom: 10%;
+  }
+  .hero-overlay h2 {
+    font-size: 1.2rem;
+  }
+  .hero-overlay p {
+    font-size: 0.9rem;
+  }
+  .catalogo {
+    margin: 30px 16px;
+  }
+  .btn-modal {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+  .modal-content {
+    width: 95vw;
+  }
+  .modal-fullscreen-content {
+    padding: 24px 16px;
+  }
+  .vitrine-item {
+    flex: 1 1 100%;
+  }
+  .hero img {
+    object-position: center top;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 0 0 90%;
+  }
+  .hero-message h1 {
+    font-size: 1.3rem;
+  }
+  .hero-message p {
+    font-size: 0.9rem;
+  }
+  .hero-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+document.querySelectorAll(".card").forEach(card => observer.observe(card));
