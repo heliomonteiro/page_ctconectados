@@ -8,14 +8,34 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+	<header class="mobile-header">
+	  <img src="https://cdn.beacons.ai/user_content/4uVt9QjPznQSL6TcPWjyorUCp663/profile_ctconectados.png?t=1751428194750" class="logo-mobile" alt="CT Conectados" />
+	  <img src="logo_conectatos_2-removebg-preview.png" class="logo-desktop" alt="CT Conectados" />
+	  <nav class="desktop-nav">
+		<a href="index.html">← Início</a>
+		<a href="#funcionais">Funcionais</a>
+		<a href="#desempenho">Desempenho</a>
+		<a href="#ritmo">Ritmo</a>
+		<a href="#kids">Kids + 60+</a>
+	  </nav>
+	  <button id="toggle-menu">☰</button>
+	</header>
+
+	<nav class="mobile-nav" id="mobile-nav">
+	  <a href="index.html">← Início</a>
+	  <a href="#funcionais">Funcionais</a>
+	  <a href="#desempenho">Desempenho</a>
+	  <a href="#ritmo">Ritmo</a>
+	  <a href="#kids">Kids + 60+</a>
+	</nav>
+
   <!-- HERO -->
   <header class="hero">
     <div class="hero-message">
-      <img src="https://cdn.beacons.ai/user_content/4uVt9QjPznQSL6TcPWjyorUCp663/profile_ctconectados.png?t=1751428194750" alt="Logo CT Conectados" style="max-width: 180px; margin-bottom: 16px;">
       <h1>Descubra sua próxima modalidade</h1>
       <p>Treinos para todos os estilos. <button class="btn-fullscreen">Qual combina com você?</button></p>
-      <a href="index.html" class="hero-btn btn-primary">← Voltar ao Início</a>
     </div>
+	
     <div class="hero-slide" id="hero-slide">
       <img id="hero-img" src="" alt="Modalidade destaque" />
       <div class="hero-overlay">
@@ -24,6 +44,7 @@
       </div>
     </div>
   </header>
+
 
   <!-- CATEGORIAS -->
   <section class="catalogo">

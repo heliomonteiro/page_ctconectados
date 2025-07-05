@@ -181,4 +181,10 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.1
 });
 
+document.getElementById("toggle-menu").onclick = () => {
+  const nav = document.getElementById("mobile-nav");
+  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+};
+
 document.querySelectorAll(".card").forEach(card => observer.observe(card));
+
