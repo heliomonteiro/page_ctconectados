@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CT Conectados</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #0b0b0b;
+      color: white;
+    }
+    header.hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header.hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      top: 20%;
+    }
+    .hero-content img {
+      height: 80px;
+      margin-bottom: 20px;
+    }
+    .hero-content h1 {
+      font-size: 2.4rem;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin: 12px 0 24px;
+    }
+    .hero-content .btn {
+      margin: 0 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn-primary {
+      background-color: #8ECE42;
+      color: #0b0b0b;
+    }
+    .btn-secondary {
+      background-color: #F8A10E;
+      color: #0b0b0b;
+    }
+    .scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.5rem;
+      animation: bounce 1.5s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+    section {
+      padding: 60px 20px;
+    }
+    .zebra:nth-child(even) {
+      background: #111;
+    }
+    .zebra:nth-child(odd) {
+      background: #1a1a1a;
+    }
+    .zebra h2 {
+      font-size: 1.8rem;
+      color: #F8A10E;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .zebra p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #ccc;
+    }
+    .footer {
+      background: #0b0b0b;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .footer p {
+      margin-bottom: 8px;
+    }
+    .footer a {
+      color: #18A1AA;
+      text-decoration: none;
+    }
+    .depoimentos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .depoimento {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 300px;
+      color: #ddd;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="https://media.istockphoto.com/id/2028236559/pt/v%C3%ADdeo/health-fitness-and-exercise-with-couple-in-gym-for-workout-stretching-and-coaching-personal.mp4?s=mp4-640x640-is&k=20&c=a0KFyPKWZ3CH94TK-Bh28qF3VT68kAkNGtE9P6rRtTo=" type="video/mp4">
+    </video>
+    <div class="hero-content" data-aos="fade-up">
+      <img src="https://cdn.beacons.ai/user_content/4uVt9QjPznQSL6TcPWjyorUCp663/profile_ctconectados.png?t=1751428194750" alt="CT Conectados" />
+      <h1>CT Conectados</h1>
+      <p>Conecte corpo e mente<br/>Treinos inteligentes, para todas as idades.</p>
+      <a href="modalidades.html" class="btn btn-primary">Ver Modalidades</a>
+      <a href="https://wa.me/5534993052222" target="_blank" class="btn btn-secondary">Agendar Aula</a>
+    </div>
+    <div class="scroll-indicator">↓</div>
+  </header>
+
+  <section class="zebra" data-aos="fade-up">
+    <h2>Treine com Propósito</h2>
+    <p>Oferecemos modalidades que respeitam seu ritmo, com estrutura moderna e acompanhamento profissional.</p>
+  </section>
+
+  <section class="zebra" data-aos="fade-up">
+    <h2>Para Todas as Idades</h2>
+    <p>Temos treinos para crianças, adultos e a melhor idade — com segurança, diversão e evolução.</p>
+  </section>
+
+  <section class="zebra" data-aos="fade-up">
+    <h2>Depoimentos</h2>
+    <div class="depoimentos">
+      <div class="depoimento">“Comecei aos 62 e hoje treino com minha neta!”</div>
+      <div class="depoimento">“O CT me mostrou que é possível começar brincando.”</div>
+      <div class="depoimento">“Ambiente acolhedor e profissionais incríveis.”</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>📍 Alameda Ver. Júlio César de Rezende, 84 - Boa Vista, Uberaba - MG</p>
+    <p>📱 <a href="https://wa.me/5534993052222" target="_blank">WhatsApp: (34) 99305-2222</a></p>
+    <p>📸 <a href="https://www.instagram.com/ctconectados/" target="_blank">@ctconectados</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>

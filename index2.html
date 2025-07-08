@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CT Conectados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --verde: #8ECE42;
+      --azul: #18A1AA;
+      --laranja: #F8A10E;
+      --preto: #0b0b0b;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--preto);
+      color: white;
+      scroll-behavior: smooth;
+    }
+    header.hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header.hero video {
+      position: absolute;
+      width: 100%; height: 100%; object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+    .hero-content {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      color: var(--laranja);
+      animation: fadeInDown 1s ease-in-out;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #ddd;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+    .hero-content a {
+      margin-top: 20px;
+      background: var(--verde);
+      color: var(--preto);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      font-size: 2rem;
+      color: var(--laranja);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+    .zebra:nth-child(even) { background: #111; }
+    .zebra:nth-child(odd)  { background: #1a1a1a; }
+    .zebra h2 {
+      color: var(--verde);
+      margin-bottom: 16px;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .zebra p {
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto 24px;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+    .zebra img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: var(--laranja);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      border-radius: 50%;
+      padding: 14px;
+      z-index: 1000;
+    }
+    .whatsapp-btn img {
+      width: 28px; height: 28px;
+    }
+    @media (max-width: 768px) {
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content p { font-size: 1rem; }
+      .zebra h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <video autoplay muted loop>
+      <source src="https://media.istockphoto.com/id/2028236559/pt/v%C3%ADdeo/health-fitness-and-exercise-with-couple-in-gym-for-workout-stretching-and-coaching-personal.mp4?s=mp4-640x640-is&k=20&c=a0KFyPKWZ3CH94TK-Bh28qF3VT68kAkNGtE9P6rRtTo=" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <h1>Bem-vindo ao CT Conectados</h1>
+      <p>Transforme seu corpo. Conecte-se com sua melhor versão.</p>
+      <a href="modalidades.html">Conheça as Modalidades</a>
+    </div>
+    <div class="scroll-down">↓</div>
+  </header>
+
+  <section class="zebra">
+    <h2>Localização</h2>
+    <p>Alameda Ver. Júlio César de Rezende, 84 - Boa Vista, Uberaba - MG, 38017-100</p>
+    <iframe src="https://www.google.com/maps?q=Alameda%20Ver.%20J%C3%BAlio%20C%C3%A9sar%20de%20Rezende,%2084%20-%20Boa%20Vista,%20Uberaba%20-%20MG&output=embed" width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <section class="zebra">
+    <h2>Para todos os públicos</h2>
+    <p>Kids, Melhor Idade, atletas e iniciantes. No CT Conectados, todos têm espaço e suporte personalizado.</p>
+    <img src="https://images.unsplash.com/photo-1584467735871-8491f0a1e29e?q=80" alt="Inclusão" />
+  </section>
+
+  <section class="zebra">
+    <h2>Conheça nosso espaço</h2>
+    <p>Equipamentos modernos, ambientes acolhedores e uma equipe pronta pra te acompanhar em cada treino.</p>
+    <img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?q=80" alt="Academia" />
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CT Conectados</p>
+    <p>
+      <a href="https://www.instagram.com/ctconectados/" target="_blank">Instagram</a> |
+      <a href="https://wa.me/5534993052222" target="_blank">WhatsApp</a>
+    </p>
+  </footer>
+
+  <a class="whatsapp-btn" href="https://wa.me/5534993052222" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</body>
+</html>
