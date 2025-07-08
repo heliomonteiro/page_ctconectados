@@ -1,0 +1,204 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat','Roboto', sans-serif;
+  color: white;
+}
+
+/* Vídeo de fundo */
+.video-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay principal */
+.overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho */
+.hero-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  opacity: 0.9;
+  color: lightgray;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  /*font-weight: 300;*/
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+.social-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: white;
+}
+
+/* Container de botões */
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+  flex: 1;
+  justify-content: center;
+}
+
+/* Botões */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 64px;
+  padding: 16px 24px;
+  width: 95%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  color: #0B797D;
+  font-size: 1.15rem;
+  /*font-weight: 500;*/
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  overflow: hidden; /* impede que a imagem force o botão a crescer */
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.btn-img {
+  height: 50px;
+  width: auto;
+  max-width: 50px;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px; /* opcional, para suavizar */
+}
+
+.btn-img-fit {
+  padding: 10px 20px; /* menos altura */
+  min-height: 64px;
+}
+
+.btn-img-fit .btn-img {
+  height: 45px;
+  width: 45px;
+  /*max-width: 45px;*/
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+}
+
+.btn-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  text-align: center;
+}
+
+.btn-text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.text-sm-normal {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.42px;
+  margin-top: 4px;
+  color: #0B797D;
+}
+
+
+/* Efeito hover */
+.btn:hover {
+  transform: scale(1.03);
+}
+
+/* Efeito shake + zoom para destaque */
+@keyframes shake-zoom {
+  0% { transform: scale(1) translateX(0); }
+  25% { transform: scale(1.03) translateX(-2px); }
+  50% { transform: scale(1.05) translateX(2px); }
+  75% { transform: scale(1.03) translateX(-1px); }
+  100% { transform: scale(1) translateX(0); }
+}
+
+.shake-zoom {
+  animation: shake-zoom 2s infinite ease-in-out;
+}
+
+/* Botão flutuante */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+
+/* Rodapé */
+.branding {
+  font-size: 0.85rem;
+  opacity: 0.85;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #fff;
+}

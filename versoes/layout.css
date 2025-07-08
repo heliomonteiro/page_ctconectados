@@ -1,0 +1,52 @@
+.BlockCard {
+  background: #fff;
+  border-radius: var(--beacons-border-radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 16px;
+}
+
+.BlockCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.BlockCardHeaderTitle {
+  font-size: 1.2rem;
+  font-weight: var(--beacons-semibold-font-weight);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.BlockCardHeaderButton > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.SmallIconButtonLargeTouchTarget {
+  padding: 8px 16px;
+  margin: -8px;
+  background: linear-gradient(90deg, #4a00e0, #8e2de2);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.glowing-wrapper-button {
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: conic-gradient(from 180deg at 50% 50%, #e0e0ff, #f0f0ff);
+  box-shadow: 0 0 12px rgba(138, 43, 226, 0.3);
+}
+
+.ErrorText {
+  color: var(--error-color);
+  text-align: center;
+  font-size: 0.8rem;
+}

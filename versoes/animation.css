@@ -1,0 +1,27 @@
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse_small_infinite {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes slideInFromLeft {
+  0% { transform: translateX(-20%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(20%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+.EnterFromLeft {
+  animation: slideInFromLeft 0.3s ease-in-out;
+}
+
+.EnterFromRight {
+  animation: slideInFromRight 0.3s ease-in-out;
+}
